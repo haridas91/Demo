@@ -1,0 +1,30 @@
+﻿@model DemoMvc.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>EmployeeId</th>
+            <th>Name</th>
+            <th>EmployeeCode</th>
+        </tr>
+
+        @foreach (var item in Model.ToList())
+        {
+
+<tr >
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.EmployeeCode</td>
+               
+            </tr>
+
+        }
+
+    </table>
+   
+</div>
